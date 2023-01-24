@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: node-express-hello-uetw
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: node-express-hello-uetw
+    app.kubernetes.io/part-of: application-sample
+  name: node-express-hello-uetw
+  namespace: default
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: node-express-hello-uetw
+status:
+  loadBalancer: {}
